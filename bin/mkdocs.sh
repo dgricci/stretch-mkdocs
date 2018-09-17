@@ -45,7 +45,7 @@ usage () {
 usage: `basename $0` [--help -h] | [--dry-run] argumentsAndOptions
 
     --help, -h          : prints this help and exits
-    --dry-run           : do not execute mkdocs, just show the command to be executed
+    --dry-run, -s       : do not execute mkdocs, just show the command to be executed
 
     argumentsAndOptions : arguments and/or options to be handed over to mkdocs
 EOF
@@ -80,8 +80,7 @@ while [ $# -gt 0 ]; do
             run -1 "${cmdToExec} --help"
             usage 0
             ;;
-        --dry-run)
-            # -s is a pandoc option ...
+        --dry-run|-s)
             dryrun=true
             noMoreOptions=true
             ;;

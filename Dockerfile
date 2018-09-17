@@ -1,5 +1,5 @@
 ## Dockerfile for MkDocs
-FROM dgricci/python:1.0.0
+FROM dgricci/python:3.6.6
 MAINTAINER Didier Richard <didier.richard@ign.fr>
 LABEL       version="1.0.0" \
             mkdocs="1.0.3" \
