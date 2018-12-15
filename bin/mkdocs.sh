@@ -3,7 +3,7 @@
 # Exécute le container docker dgricci/mkdocs
 #
 # Constantes :
-VERSION="1.0.0"
+VERSION="1.0.1"
 # Variables globales :
 unset dryrun
 unset noMoreOptions
@@ -61,7 +61,7 @@ proxyEnv=""
 [ ! -z "${https_proxy}" ] && {
     proxyEnv="${proxyEnv} -e https_proxy=${https_proxy}"
 }
-cmdToExec="docker run ${proxyEnv} -e USER_ID=${UID} -e USER_NAME=${USER} --name=\"mkdocs$$\" --rm=true -v'`pwd`':/documents -w/documents dgricci/mkdocs mkdocs"
+cmdToExec="docker run ${proxyEnv} -e USER_ID=${UID} -e USER_NAME=${USER} --name=\"mkdocs$$\" --rm=true --mount type=bind,source='`pwd`',target=/documents -w/documents dgricci/mkdocs mkdocs"
 [ $# -eq 0 ] && {
     # add option --version to positional arguments (cause none)
     set -- "--version"

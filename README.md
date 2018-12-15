@@ -1,11 +1,12 @@
 % Environnement MkDocs  
 % Didier Richard  
-% 2018/08/30
+% 2018/12/15
 
 ---
 
 revision:
 - 1.0.0 : 2018/08/30  
+- 1.0.1 : 2018/12/15  
 
 ---
 
@@ -31,8 +32,8 @@ $ docker tag dgricci/mkdocs:$(< VERSION) dgricci/mkdocs:latest
 See `dgricci/stretch` README for handling permissions with dockers volumes.
 
 ```bash
-$ docker run -it --rm dgricci/mkdocs:$(< VERSION)
-mkdocs, version 1.0.3 from /usr/local/lib/python3.6/site-packages/mkdocs (Python 3.6)
+$ docker run --rm dgricci/mkdocs:$(< VERSION)
+mkdocs, version 1.0.4 from /usr/local/lib/python3.6/site-packages/mkdocs (Python 3.6)
 ```
 
 ## A shell to hide container's usage ##
@@ -46,7 +47,7 @@ script has been copied in a bin directory and is in the user's PATH) :
 $ cd whatever/bin
 $ ln -s mkdocs.sh mkdocs
 $ mkdocs -V
-mkdocs, version 1.0.1 from /usr/local/lib/python3.6/site-packages/mkdocs (Python 3.6)
+mkdocs, version 1.0.4 from /usr/local/lib/python3.6/site-packages/mkdocs (Python 3.6)
 ```
 
 __Et voilà !__
