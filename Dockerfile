@@ -1,8 +1,8 @@
 ## Dockerfile for MkDocs
-FROM dgricci/python:3.6.6
+FROM dgricci/python:3.6.9
 MAINTAINER Didier Richard <didier.richard@ign.fr>
-LABEL       version="1.0.1" \
-            mkdocs="1.0.4" \
+LABEL       version="1.0.2" \
+            mkdocs="1.1.2" \
             os="Debian Stretch" \
             description="MkDocs"
 
